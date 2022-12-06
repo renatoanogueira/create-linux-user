@@ -15,7 +15,7 @@ if [ $(id -u) -eq 0 ]; then
         else
                 pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
                 # added -b param to change user basedir, -G to add user on such group, and -k to pull empty skell files
-                useradd -b /sftp -m -G 1002 -k /dev/null -p "$pass" "$username"
+                useradd -b /sftp -m -G sftp -k /dev/null -p "$pass" "$username"
                 [ $? -eq 0 ] && echo "User has been added to system!" || echo "Failed to add a user!"
         fi
 else

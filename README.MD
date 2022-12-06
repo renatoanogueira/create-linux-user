@@ -2,3 +2,5 @@ This is a script used to create users in linux. I was looking this solution to s
 
 The script was copied from this link: https://www.cyberciti.biz/tips/howto-write-shell-script-to-add-user.html
 and some paramaters was changed do fullfill my needs.
+
+after all tests I changed script name to create_user only and moved it to /bin

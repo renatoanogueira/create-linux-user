@@ -6,6 +6,9 @@
 # ------------------------------------------------------------------
 # Am i Root user?
 if [ $(id -u) -eq 0 ]; then
+        echo "Information:"
+        echo "This script creates a user to be used as our sftp partners only. if you need an user to another reason, use the useradd command."
+        echo "Press Ctrl-C to cancel"
         read -p "Enter username : " username
         read -s -p "Enter password : " password
         egrep "^$username" /etc/passwd >/dev/null
